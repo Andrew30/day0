@@ -11,6 +11,9 @@ class Calculator(object):
     def Multiply(self, x, y):
         return x * y
 
+    def Divide(self, x, y):
+        return x / y
+
 class tddexample(unittest.TestCase):
     def test_calculator_add_method_returns_correct_result(self):
         calc = Calculator()
@@ -26,6 +29,11 @@ class tddexample(unittest.TestCase):
         calc = Calculator()
         result = calc.Multiply(5, 2)
         self.assertEqual(10, result)
+
+    def test_calculator_Divide_method_returns_correct_result(self):
+        calc = Calculator()
+        result = calc.Divide(8, 2)
+        self.assertEqual(4, result)
 
 
 if __name__ == '__main__':
