@@ -8,6 +8,8 @@ class Calculator(object):
     def Subtract(self, x, y):
         return x - y
 
+    def Multiply(self, x, y):
+        return x * y
 
 class tddexample(unittest.TestCase):
     def test_calculator_add_method_returns_correct_result(self):
@@ -19,6 +21,11 @@ class tddexample(unittest.TestCase):
         calc = Calculator()
         result = calc.Subtract(5, 2)
         self.assertEqual(3, result)
+
+    def test_calculator_Multiply_method_returns_correct_result(self):
+        calc = Calculator()
+        result = calc.Multiply(5, 2)
+        self.assertEqual(10, result)
 
 
 if __name__ == '__main__':
